@@ -1,0 +1,27 @@
+<!--<ul>
+    <li *ngFor="let gif of resultados">
+        {{gif.title}}
+        <img src="{{gif.images.downsized.url}}"/>
+    </li>
+</ul>-->
+
+<div class="row" style="min-width: 200px;">
+    <div class="col-md-4 col-sm-6 animate__animated animate__bounce animate__slow" *ngFor="let gif of resultados">
+        <div class="card" style="height: 15rem;">
+            <!--Podemos poner:
+                [src]="url_iamgen"
+                src="{{gif.images.downsized_medium.url}}"
+            -->
+            <img [src]="gif.images.downsized_medium.url"
+            [alt]="gif.title"
+            class="card-img-top"
+            style="height: 12rem;"/>
+
+            <div class="card-body">
+                <p class="card-title">
+                    {{gif.title}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
