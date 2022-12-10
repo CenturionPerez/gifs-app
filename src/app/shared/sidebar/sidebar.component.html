@@ -1,7 +1,8 @@
 <div class="bg-dark border-right p-3" id="sidebar">
     <h3 class="text-light">Gifs-App</h3>
     <hr class="text-white"/>
-    <div class="list-group list-reset" *ngFor="let result of historial">
+    <button (click)="deleteHistory()" class="btn btn-secondary" style="margin: 10px">Borrar historial</button>
+    <div class="list-group list-reset" *ngFor="let result of historial" style="margin-bottom: 10px">
       <a value="{result | titlecase}" href="#" class="list-group-item list-group-item-action"
        (click)="rechargeGifs(result)">
         {{result | titlecase}}

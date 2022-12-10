@@ -16,6 +16,10 @@ export class GifsService {
   get historial(){ //Para romper el error y desreferenciar acordarse de poner [...propiedadClase]
     return [...this._historial];
   }
+  cleanHistorial(){
+    this._historial = [];
+    localStorage.removeItem("historial");
+  }
   buscarGifs(query: string){
     if(query == ''){return;}
 

@@ -18,4 +18,7 @@ export class SidebarComponent {
   rechargeGifs(result: string){
     this.gifsService.buscarGifs(result);
   }
+  deleteHistory(){
+    this.gifsService.cleanHistorial();
+  }
 }

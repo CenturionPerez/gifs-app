@@ -7,7 +7,7 @@
 
 <div class="row" style="min-width: 200px;">
     <div class="col-md-4 col-sm-6 animate__animated animate__bounce animate__slow" *ngFor="let gif of resultados">
-        <div class="card" style="height: 15rem;">
+        <div class="card" style="height: 15rem; margin-bottom: 20px;">
             <!--Podemos poner:
                 [src]="url_iamgen"
                 src="{{gif.images.downsized_medium.url}}"
@@ -18,7 +18,10 @@
             style="height: 12rem;"/>
 
             <div class="card-body">
-                <p class="card-title">
+                <p class="card-title" 
+                    style="overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;">
                     {{gif.title}}
                 </p>
             </div>
